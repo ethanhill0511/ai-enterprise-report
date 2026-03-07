@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Enterprise Report — Daily AI News for IT Leaders</title>
+    <meta name="description" content="Daily curated AI news for enterprise IT leaders. Cut through the hype. What actually matters for your org.">
+    <meta property="og:title" content="The AI Enterprise Report">
+    <meta property="og:description" content="Daily curated AI news for enterprise IT leaders. No hype. No fluff. What actually works.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ethanhill">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa; --surface: #ffffff; --text: #1a1a1a; --text-secondary: #666;
+            --accent: #1d9bf0; --accent-dark: #0d8ae0; --border: #e5e5e5;
+            --tag-tech: #3b82f6; --tag-biz: #10b981; --tag-world: #8b5cf6;
+            --tag-local: #f59e0b; --tag-tools: #ef4444;
+            --featured-bg: #f0f7ff; --featured-border: #1d9bf0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: var(--surface); border-bottom: 3px solid var(--accent); padding: 20px 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .site-title { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+        .site-title span { color: var(--accent); }
+        .site-subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+        .header-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .header-right { display: flex; align-items: center; gap: 16px; }
+        .follow-link { background: var(--accent); color: white; text-decoration: none; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 13px; transition: background 0.2s; }
+        .follow-link:hover { background: var(--accent-dark); }
+
+        .date-nav { display: flex; align-items: center; gap: 12px; margin: 20px 0 8px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; flex-wrap: wrap; }
+        .date-nav-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+        .date-btn { padding: 5px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 500; cursor: pointer; transition: all 0.15s; text-decoration: none; }
+        .date-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .date-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+        .date-btn.nav-arrow { font-weight: 700; font-size: 14px; padding: 5px 10px; }
+        .date-btn:disabled { opacity: 0.3; cursor: default; }
+        .date-current { font-size: 15px; font-weight: 600; font-family: 'JetBrains Mono', monospace; min-width: 160px; text-align: center; }
+        .date-nav-right { margin-left: auto; display: flex; gap: 6px; }
+
+        .featured { background: var(--featured-bg); border: 1px solid var(--featured-border); border-radius: 12px; padding: 24px; margin: 16px 0; }
+        .featured-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 10px; }
+        .featured-text { font-size: 18px; font-weight: 600; line-height: 1.5; white-space: pre-line; }
+        .featured-author { margin-top: 12px; font-size: 13px; color: var(--text-secondary); }
+        .featured-author a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        .section { margin: 28px 0; }
+        .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+        .section-title { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-count { font-size: 12px; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; }
+
+        .story { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; transition: border-color 0.2s, box-shadow 0.2s; }
+        .story:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(29,155,240,0.08); }
+        .story-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+        .tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 4px; color: white; }
+        .tag-tech { background: var(--tag-tech); } .tag-business { background: var(--tag-biz); }
+        .tag-world { background: var(--tag-world); } .tag-local { background: var(--tag-local); }
+        .tag-tools { background: var(--tag-tools); }
+        .story-source { font-size: 12px; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; }
+        .story-headline { font-size: 16px; font-weight: 600; line-height: 1.4; }
+        .story-headline a { color: var(--text); text-decoration: none; }
+        .story-headline a:hover { color: var(--accent); }
+        .story-summary { font-size: 14px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+
+        .archive-day { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 20px; margin-bottom: 8px; cursor: pointer; transition: all 0.15s; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: var(--text); }
+        .archive-day:hover { border-color: var(--accent); }
+        .archive-day-date { font-weight: 600; font-size: 15px; }
+        .archive-day-count { font-size: 13px; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; }
+        .archive-day-tweet { font-size: 13px; color: var(--text-secondary); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 500px; }
+
+        .stats-bar { display: flex; gap: 20px; font-size: 13px; color: var(--text-secondary); }
+        .stat { font-family: 'JetBrains Mono', monospace; }
+        .stat strong { color: var(--text); }
+
+        footer { margin-top: 40px; padding: 24px 0; border-top: 2px solid var(--border); text-align: center; font-size: 13px; color: var(--text-secondary); }
+        footer a { color: var(--accent); text-decoration: none; }
+        .footer-tagline { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+
+        .empty-state { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+        .empty-state h2 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
+
+        @media (max-width: 640px) {
+            .site-title { font-size: 22px; }
+            .featured-text { font-size: 16px; }
+            .story { padding: 14px 16px; }
+            .header-meta { flex-direction: column; align-items: flex-start; }
+            .date-nav { flex-direction: column; align-items: stretch; text-align: center; }
+            .date-nav-right { margin-left: 0; justify-content: center; }
+            .archive-day-tweet { max-width: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-meta">
+            <div>
+                <div class="site-title">The <span>AI</span> Enterprise Report</div>
+                <div class="site-subtitle">Daily AI news for IT leaders. No hype. What actually works.</div>
+            </div>
+            <div class="header-right">
+                <a href="https://x.com/ethanhill" class="follow-link" target="_blank">Follow @ethanhill</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="date-nav">
+        <span class="date-nav-label">Browse:</span>
+        <button class="date-btn nav-arrow" id="prev-day" onclick="navigateDay(-1)">&larr;</button>
+        <span class="date-current" id="current-date-display">Loading...</span>
+        <button class="date-btn nav-arrow" id="next-day" onclick="navigateDay(1)">&rarr;</button>
+        <div class="date-nav-right">
+            <button class="date-btn active" id="btn-today" onclick="goToToday()">Today</button>
+            <button class="date-btn" id="btn-archive" onclick="showArchive()">All Days</button>
+        </div>
+    </div>
+    <div id="content-area"><div class="empty-state"><h2>Loading...</h2></div></div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-tagline">Cut through the hype. Ship what works.</div>
+        <p>The AI Enterprise Report is curated daily by <a href="https://x.com/ethanhill" target="_blank">@ethanhill</a></p>
+        <p style="margin-top:4px">An IT professional building with AI every day.</p>
+        <div class="stats-bar" style="justify-content:center;margin-top:12px"><span class="stat" id="footer-stats"></span></div>
+    </div>
+</footer>
+
+<script>
+let allData=[], currentDateIndex=0;
+
+async function loadData(){
+    try {
+        const r=await fetch('stories.json'); allData=await r.json();
+        allData.sort((a,b)=>b.date.localeCompare(a.date));
+        renderDay(0); updateStats();
+        checkHash();
+    } catch(e){ document.getElementById('content-area').innerHTML='<div class="empty-state"><h2>No stories yet</h2><p>Check back tomorrow for the first edition.</p></div>'; }
+}
+
+function esc(t){ const d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+
+function fmtDate(s){ return new Date(s+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+function fmtShort(s){ return new Date(s+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}); }
+
+function renderDay(i){
+    currentDateIndex=i; const day=allData[i]; if(!day) return;
+    document.getElementById('btn-today').classList.toggle('active',i===0);
+    document.getElementById('btn-archive').classList.remove('active');
+    document.getElementById('current-date-display').textContent=fmtDate(day.date);
+    document.getElementById('prev-day').disabled=i>=allData.length-1;
+    document.getElementById('next-day').disabled=i<=0;
+    window.location.hash=i===0?'':day.date;
+
+    const cats={top:{t:'Top Stories',s:[]},tools:{t:'AI Tools & Products',s:[]},enterprise:{t:'Enterprise & CIO',s:[]},policy:{t:'Policy & Regulation',s:[]},deep:{t:'Deep Dives & Analysis',s:[]}};
+    day.stories.forEach(s=>{(cats[s.category]||cats.top).s.push(s);});
+
+    let h='';
+    if(day.featured_tweet){
+        h+=`<div class="featured"><div class="featured-label">Daily Take</div><div class="featured-text">${esc(day.featured_tweet.text)}</div><div class="featured-author">— <a href="${day.featured_tweet.url}" target="_blank">${esc(day.featured_tweet.author)}</a> · ${fmtShort(day.date)}</div></div>`;
+    }
+    for(const[k,c]of Object.entries(cats)){
+        if(!c.s.length) continue;
+        h+=`<div class="section"><div class="section-header"><div class="section-title">${c.t}</div><div class="section-count">${c.s.length} ${c.s.length===1?'story':'stories'}</div></div>`;
+        c.s.forEach(s=>{
+            h+=`<div class="story"><div class="story-top"><span class="tag ${s.tag_class}">${esc(s.tag)}</span><span class="story-source">${esc(s.source)}</span></div><div class="story-headline"><a href="${s.url}" target="_blank">${esc(s.headline)}</a></div><div class="story-summary">${esc(s.summary)}</div></div>`;
+        });
+        h+='</div>';
+    }
+    document.getElementById('content-area').innerHTML=h;
+}
+
+function showArchive(){
+    document.getElementById('btn-today').classList.remove('active');
+    document.getElementById('btn-archive').classList.add('active');
+    document.getElementById('current-date-display').textContent='All Days';
+    window.location.hash='archive';
+    let h='<div style="margin:20px 0">';
+    allData.forEach((d,i)=>{
+        const preview=d.featured_tweet?d.featured_tweet.text.split('\n')[0].substring(0,80)+'...':'';
+        h+=`<a class="archive-day" href="#${d.date}" onclick="renderDay(${i});return false;"><div><div class="archive-day-date">${fmtDate(d.date)}</div><div class="archive-day-tweet">${esc(preview)}</div></div><div class="archive-day-count">${d.stories.length} stories</div></a>`;
+    });
+    h+='</div>';
+    document.getElementById('content-area').innerHTML=h;
+}
+
+function navigateDay(delta){ const n=currentDateIndex-delta; if(n>=0&&n<allData.length) renderDay(n); }
+function goToToday(){ renderDay(0); }
+function updateStats(){
+    const ts=allData.reduce((s,d)=>s+d.stories.length,0);
+    document.getElementById('footer-stats').innerHTML=`<strong>${ts}</strong> stories across <strong>${allData.length}</strong> ${allData.length===1?'day':'days'}`;
+}
+function checkHash(){
+    const h=window.location.hash.replace('#','');
+    if(h==='archive') showArchive();
+    else if(h){ const idx=allData.findIndex(d=>d.date===h); if(idx>=0) renderDay(idx); }
+}
+window.addEventListener('hashchange',checkHash);
+loadData();
+</script>
+</body>
+</html>

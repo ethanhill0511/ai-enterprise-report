@@ -1,0 +1,132 @@
+[
+  {
+    "date": "2026-03-06",
+    "featured_tweet": {
+      "text": "Unpopular opinion: Most enterprise AI failures aren't AI failures.\n\nThey're data quality failures wearing an AI hat.\n\nBest model in the world won't save garbage data.\n\nCIOs spending millions on models while ignoring data governance are lighting money on fire.",
+      "url": "https://x.com/ethanhill",
+      "author": "@ethanhill"
+    },
+    "stories": [
+      {
+        "category": "top",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "InformationWeek",
+        "headline": "2026 Enterprise AI Predictions: Fragmentation, Commodification, and the Agent Push Facing CIOs",
+        "url": "https://www.informationweek.com/machine-learning-ai/2026-enterprise-ai-predictions-fragmentation-commodification-and-the-agent-push-facing-cios",
+        "summary": "75%+ of CIOs expect to invest in agentic AI by year-end. Focus areas: sales, ops, finance, compliance. The shift from copilots to autonomous agents is accelerating.",
+        "time": "6 hours ago"
+      },
+      {
+        "category": "top",
+        "tag": "Business",
+        "tag_class": "tag-business",
+        "source": "PR Newswire / Info-Tech",
+        "headline": "CIO Priorities 2026: CIOs Refocus on Value as AI Scales Across the Enterprise",
+        "url": "https://www.prnewswire.com/news-releases/cio-priorities-2026-cios-refocus-on-value-as-ai-scales-across-the-enterprise-says-info-tech-research-group-in-new-report-302665604.html",
+        "summary": "CIOs are no longer judged on whether they can adopt AI, but whether they can prove its value. Fewer experiments, more production deployments.",
+        "time": "8 hours ago"
+      },
+      {
+        "category": "top",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "OpenAI",
+        "headline": "OpenAI Launches GPT-5.4 for Complex Professional Workflows",
+        "url": "#",
+        "summary": "New model designed for long-running enterprise tasks. 47% fewer tokens on professional workloads. The efficiency gain matters — token costs are a real line item for IT teams.",
+        "time": "12 hours ago"
+      },
+      {
+        "category": "top",
+        "tag": "Business",
+        "tag_class": "tag-business",
+        "source": "Reuters",
+        "headline": "Foxconn Revenue Surges 21.6% on AI Server Demand",
+        "url": "#",
+        "summary": "Hon Hai reports strong growth driven by Nvidia-based AI infrastructure. The AI buildout is real — follow the supply chain, not the hype cycle.",
+        "time": "14 hours ago"
+      },
+      {
+        "category": "top",
+        "tag": "Policy",
+        "tag_class": "tag-world",
+        "source": "Tech Startups",
+        "headline": "China Unveils AI-Centric Economic Blueprint, Mentions AI 50+ Times",
+        "url": "https://techstartups.com/2026/03/06/top-tech-news-today-march-6-2026/",
+        "summary": "New economic plan embeds 'AI+ action plan' across industries. State-backed AI integration at a scale no Western government is matching.",
+        "time": "16 hours ago"
+      },
+      {
+        "category": "tools",
+        "tag": "Tools",
+        "tag_class": "tag-tools",
+        "source": "Anthropic",
+        "headline": "Claude Cowork Now Runs Scheduled Tasks from Your Desktop",
+        "url": "#",
+        "summary": "Set up automated workflows that run on a schedule — inbox digests, report generation, daily briefings — all from the Claude desktop app.",
+        "time": "Today"
+      },
+      {
+        "category": "tools",
+        "tag": "Tools",
+        "tag_class": "tag-tools",
+        "source": "Fujitsu",
+        "headline": "Fujitsu Launches AI Platform Automating Full Software Development Lifecycle",
+        "url": "#",
+        "summary": "Not just copilot coding — full lifecycle from requirements to testing. Enterprise-grade, aimed at large IT orgs managing hundreds of internal apps.",
+        "time": "Today"
+      },
+      {
+        "category": "tools",
+        "tag": "Tools",
+        "tag_class": "tag-tools",
+        "source": "SageX",
+        "headline": "SageX AI Layer Eliminates Manual ERP Data Entry",
+        "url": "#",
+        "summary": "Converts unstructured docs into structured, ERP-ready data. The pattern: AI as translation layer between messy real-world data and rigid enterprise systems.",
+        "time": "Today"
+      },
+      {
+        "category": "enterprise",
+        "tag": "Enterprise",
+        "tag_class": "tag-business",
+        "source": "Futurum Group",
+        "headline": "The Great CIO Platform Reset: Why Agentic AI Is Forcing a 2026 Reckoning",
+        "url": "https://futurumgroup.com/press-release/the-great-cio-platform-reset-why-agentic-ai-is-forcing-a-2026-reckoning/",
+        "summary": "Enterprise architecture decisions from 3 years ago are now blocking AI agent deployment. CIOs face a platform reset whether they planned for it or not.",
+        "time": "Today"
+      },
+      {
+        "category": "enterprise",
+        "tag": "Enterprise",
+        "tag_class": "tag-business",
+        "source": "CIO Dive",
+        "headline": "5 CIO Predictions for AI in 2026",
+        "url": "https://www.ciodive.com/news/5-cio-predictions-for-ai-in-2026/807951/",
+        "summary": "Data quality will be the biggest AI bottleneck. Organizations haven't accounted for the cost and timeline to fix their data foundations.",
+        "time": "Today"
+      },
+      {
+        "category": "policy",
+        "tag": "Policy",
+        "tag_class": "tag-world",
+        "source": "Tech Startups",
+        "headline": "U.S. Weighing New AI Chip Export Controls Tied to Data Center Investment",
+        "url": "#",
+        "summary": "Foreign buyers seeking large AI chip shipments may need to invest in U.S. data centers or provide security guarantees.",
+        "time": "Today"
+      },
+      {
+        "category": "policy",
+        "tag": "Policy",
+        "tag_class": "tag-world",
+        "source": "UK Government",
+        "headline": "UK Backs £40M Frontier AI Research Lab for Science and Healthcare",
+        "url": "#",
+        "summary": "New lab focused on long-horizon AI breakthroughs. Government-funded AI R&D is picking up pace globally.",
+        "time": "Today"
+      }
+    ]
+  }
+]
