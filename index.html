@@ -43,10 +43,12 @@
         .date-nav-right { margin-left: auto; display: flex; gap: 6px; }
 
         .featured-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 16px 0; }
-        .featured { background: var(--featured-bg); border: 1px solid var(--featured-border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; }
+        .featured { background: var(--featured-bg); border: 1px solid var(--featured-border); border-radius: 12px; padding: 0; display: flex; flex-direction: column; overflow: hidden; }
         .featured.featured-mine { border-color: var(--accent); border-width: 2px; }
+        .featured-img { width: 100%; height: 140px; object-fit: cover; }
+        .featured-body { padding: 16px 20px 20px; display: flex; flex-direction: column; flex: 1; }
         .featured-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 8px; }
-        .featured-text { font-size: 14px; font-weight: 600; line-height: 1.5; white-space: pre-line; flex: 1; }
+        .featured-text { font-size: 13px; font-weight: 600; line-height: 1.5; white-space: pre-line; flex: 1; }
         .featured-author { margin-top: 12px; font-size: 12px; color: var(--text-secondary); }
         .featured-author a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
@@ -172,7 +174,8 @@ function renderDay(i){
         tweets.forEach(tw => {
             const isMine = tw.author === '@ethanhill';
             const label = tw.label || (isMine ? 'My Take' : 'Featured');
-            h+=`<div class="featured${isMine?' featured-mine':''}"><div class="featured-label">${esc(label)}</div><div class="featured-text">${esc(tw.text)}</div><div class="featured-author">— <a href="${tw.url}" target="_blank">${esc(tw.author)}</a> · ${fmtShort(day.date)}</div></div>`;
+            const imgHtml = tw.image ? `<img class="featured-img" src="${tw.image}" alt="${esc(label)}">` : '';
+            h+=`<div class="featured${isMine?' featured-mine':''}">${imgHtml}<div class="featured-body"><div class="featured-label">${esc(label)}</div><div class="featured-text">${esc(tw.text)}</div><div class="featured-author">— <a href="${tw.url}" target="_blank">${esc(tw.author)}</a> · ${fmtShort(day.date)}</div></div></div>`;
         });
         h+='</div>';
     }

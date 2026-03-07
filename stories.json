@@ -3,20 +3,23 @@
     "date": "2026-03-06",
     "featured_tweets": [
       {
-        "label": "AI Daily Report",
-        "text": "Today in AI: Enterprise agent spending projected to triple by year-end. CIOs are moving past pilots — the 2026 budget cycle is all-in on production AI deployments.",
+        "label": "The Innermost Loop",
+        "text": "Anthropic approaching $20B annualized revenue. Apple M5 Pro ships Neural Accelerators inside each GPU core — 4x AI performance over M4. OpenAI teases GPT-5.4 is 'sooner than you think.'\n\nThe Singularity now has a revenue run rate to match.",
+        "image": "images/alexwg-daily.png",
         "url": "https://x.com/alexwg",
         "author": "@alexwg"
       },
       {
         "label": "Salesforce AI",
         "text": "Agentforce is redefining how enterprises scale customer service. Autonomous agents now resolve 40% of cases without human intervention — and they're getting smarter every week.",
+        "image": "images/salesforce-agentforce.png",
         "url": "https://x.com/salesforce",
         "author": "@salesforce"
       },
       {
         "label": "My Take",
         "text": "Unpopular opinion: Most enterprise AI failures aren't AI failures.\n\nThey're data quality failures wearing an AI hat.\n\nBest model in the world won't save garbage data.\n\nCIOs spending millions on models while ignoring data governance are lighting money on fire.",
+        "image": "images/data-quality-take.png",
         "url": "https://x.com/ethanhill",
         "author": "@ethanhill"
       }
