@@ -42,10 +42,12 @@
         .date-current { font-size: 15px; font-weight: 600; font-family: 'JetBrains Mono', monospace; min-width: 160px; text-align: center; }
         .date-nav-right { margin-left: auto; display: flex; gap: 6px; }
 
-        .featured { background: var(--featured-bg); border: 1px solid var(--featured-border); border-radius: 12px; padding: 24px; margin: 16px 0; }
-        .featured-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 10px; }
-        .featured-text { font-size: 18px; font-weight: 600; line-height: 1.5; white-space: pre-line; }
-        .featured-author { margin-top: 12px; font-size: 13px; color: var(--text-secondary); }
+        .featured-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 16px 0; }
+        .featured { background: var(--featured-bg); border: 1px solid var(--featured-border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; }
+        .featured.featured-mine { border-color: var(--accent); border-width: 2px; }
+        .featured-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 8px; }
+        .featured-text { font-size: 14px; font-weight: 600; line-height: 1.5; white-space: pre-line; flex: 1; }
+        .featured-author { margin-top: 12px; font-size: 12px; color: var(--text-secondary); }
         .featured-author a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
         .section { margin: 28px 0; }
@@ -88,6 +90,7 @@
             .featured-text { font-size: 16px; }
             .story { padding: 14px 16px; }
             .header-meta { flex-direction: column; align-items: flex-start; }
+            .featured-row { grid-template-columns: 1fr; }
             .date-nav { flex-direction: column; align-items: stretch; text-align: center; }
             .date-nav-right { margin-left: 0; justify-content: center; }
             .archive-day-tweet { max-width: 200px; }
@@ -163,8 +166,15 @@ function renderDay(i){
     day.stories.forEach(s=>{(cats[s.category]||cats.top).s.push(s);});
 
     let h='';
-    if(day.featured_tweet){
-        h+=`<div class="featured"><div class="featured-label">Daily Take</div><div class="featured-text">${esc(day.featured_tweet.text)}</div><div class="featured-author">— <a href="${day.featured_tweet.url}" target="_blank">${esc(day.featured_tweet.author)}</a> · ${fmtShort(day.date)}</div></div>`;
+    const tweets = day.featured_tweets || (day.featured_tweet ? [day.featured_tweet] : []);
+    if(tweets.length){
+        h+='<div class="featured-row">';
+        tweets.forEach(tw => {
+            const isMine = tw.author === '@ethanhill';
+            const label = tw.label || (isMine ? 'My Take' : 'Featured');
+            h+=`<div class="featured${isMine?' featured-mine':''}"><div class="featured-label">${esc(label)}</div><div class="featured-text">${esc(tw.text)}</div><div class="featured-author">— <a href="${tw.url}" target="_blank">${esc(tw.author)}</a> · ${fmtShort(day.date)}</div></div>`;
+        });
+        h+='</div>';
     }
     for(const[k,c]of Object.entries(cats)){
         if(!c.s.length) continue;
@@ -184,7 +194,8 @@ function showArchive(){
     window.location.hash='archive';
     let h='<div style="margin:20px 0">';
     allData.forEach((d,i)=>{
-        const preview=d.featured_tweet?d.featured_tweet.text.split('\n')[0].substring(0,80)+'...':'';
+        const ft=d.featured_tweets?d.featured_tweets.find(t=>t.author==='@ethanhill'):d.featured_tweet;
+        const preview=ft?ft.text.split('\n')[0].substring(0,80)+'...':'';
         h+=`<a class="archive-day" href="#${d.date}" onclick="renderDay(${i});return false;"><div><div class="archive-day-date">${fmtDate(d.date)}</div><div class="archive-day-tweet">${esc(preview)}</div></div><div class="archive-day-count">${d.stories.length} stories</div></a>`;
     });
     h+='</div>';

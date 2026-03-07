@@ -1,11 +1,26 @@
 [
   {
     "date": "2026-03-06",
-    "featured_tweet": {
-      "text": "Unpopular opinion: Most enterprise AI failures aren't AI failures.\n\nThey're data quality failures wearing an AI hat.\n\nBest model in the world won't save garbage data.\n\nCIOs spending millions on models while ignoring data governance are lighting money on fire.",
-      "url": "https://x.com/ethanhill",
-      "author": "@ethanhill"
-    },
+    "featured_tweets": [
+      {
+        "label": "AI Daily Report",
+        "text": "Today in AI: Enterprise agent spending projected to triple by year-end. CIOs are moving past pilots — the 2026 budget cycle is all-in on production AI deployments.",
+        "url": "https://x.com/AWG",
+        "author": "@AWG"
+      },
+      {
+        "label": "Salesforce AI",
+        "text": "Agentforce is redefining how enterprises scale customer service. Autonomous agents now resolve 40% of cases without human intervention — and they're getting smarter every week.",
+        "url": "https://x.com/salesforce",
+        "author": "@salesforce"
+      },
+      {
+        "label": "My Take",
+        "text": "Unpopular opinion: Most enterprise AI failures aren't AI failures.\n\nThey're data quality failures wearing an AI hat.\n\nBest model in the world won't save garbage data.\n\nCIOs spending millions on models while ignoring data governance are lighting money on fire.",
+        "url": "https://x.com/ethanhill",
+        "author": "@ethanhill"
+      }
+    ],
     "stories": [
       {
         "category": "top",
