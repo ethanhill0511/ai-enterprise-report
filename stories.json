@@ -1,17 +1,165 @@
 [
   {
+    "date": "2026-03-07",
+    "featured_tweets": [
+      {
+        "label": "The Innermost Loop",
+        "text": "OpenAI's $110B mega-round closes \u2014 Amazon $50B, SoftBank $30B, Nvidia $30B. Valuation: $840B. GPT-5.4 ships same week.\n\nBroadcom guides $22B quarter on custom AI chip demand. Memory makers forecast $551B in 2026 revenue.\n\nThe AI industrial complex now has its own GDP.",
+        "url": "https://x.com/alexwg",
+        "author": "@alexwg",
+        "image": "images/alexwg-2026-03-07.png"
+      },
+      {
+        "label": "Cisco AI",
+        "text": "Silicon One G300 is here \u2014 102.4 Tbps switching silicon built for massive AI cluster networking. When you're connecting tens of thousands of GPUs, the network IS the computer. We're making sure it keeps up.\n\n#CiscoAI #DataCenter #AIInfrastructure",
+        "url": "https://x.com/Cisco",
+        "author": "@Cisco",
+        "image": "images/cisco-2026-03-07.png"
+      },
+      {
+        "label": "My Take",
+        "text": "OpenAI raised $110 billion this week. Meanwhile, most enterprise AI teams can't get budget approval for a $50K data quality initiative.\n\nThe gap between what's possible with AI and what's deployable in production keeps widening.\n\nFix your data pipeline before you upgrade your model.",
+        "url": "https://x.com/ethanhill",
+        "author": "@ethanhill",
+        "image": "images/ethan-2026-03-07.png"
+      }
+    ],
+    "stories": [
+      {
+        "category": "top",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "TechCrunch",
+        "headline": "OpenAI Closes Record $110B Funding Round Led by Amazon, SoftBank, and Nvidia",
+        "url": "https://techcrunch.com/category/artificial-intelligence/",
+        "summary": "$840B valuation. 900M weekly active users. 50M paid subscribers. The question isn't whether OpenAI is big \u2014 it's whether any single company should control this much of the AI stack.",
+        "time": "Today"
+      },
+      {
+        "category": "top",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "CNBC",
+        "headline": "Broadcom Guides $22B Quarter as Custom AI Chip Business Stays Hot",
+        "url": "https://www.cnbc.com/2026/03/04/broadcoms-custom-ai-chip-business-stays-hot-and-gives-the-bulls-a-much-needed-win-.html",
+        "summary": "CEO Hock Tan says Broadcom won't see real competition in custom AI silicon 'for many years.' Strong demand for Google's 7th-gen Ironwood TPU. The custom chip war is just getting started.",
+        "time": "Today"
+      },
+      {
+        "category": "top",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "Apple Newsroom",
+        "headline": "Apple Unveils AI-Powered Siri Overhaul with On-Screen Awareness, Powered by Gemini",
+        "url": "#",
+        "summary": "Reimagined Siri debuts with iOS 26.4 \u2014 context-aware, cross-app, built on Google's 1.2T parameter Gemini model running on Private Cloud Compute. Apple chose to partner rather than build from scratch. Smart move or dependency risk?",
+        "time": "Today"
+      },
+      {
+        "category": "top",
+        "tag": "Business",
+        "tag_class": "tag-business",
+        "source": "Tom's Hardware",
+        "headline": "Memory Makers Set to Earn $551B from AI Boom in 2026 \u2014 Double Contract Chip Manufacturers",
+        "url": "https://www.tomshardware.com/tech-industry/semiconductors/memory-makers-are-set-to-earn-usd551-billion-from-the-ai-boom-twice-as-much-as-contract-chip-manufacturers-forecasts-suggest-that-2026-revenue-will-skyrocket-thanks-to-data-center-demand",
+        "summary": "3D NAND and DRAM revenue projected to hit $551.6B. The AI supercycle isn't just about GPUs \u2014 memory is quietly becoming the biggest winner in the semiconductor stack.",
+        "time": "Today"
+      },
+      {
+        "category": "enterprise",
+        "tag": "Enterprise",
+        "tag_class": "tag-business",
+        "source": "Cisco Newsroom",
+        "headline": "Cisco Launches Silicon One G300: 102.4 Tbps Switching for AI Data Centers",
+        "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m02/cisco-announces-new-silicon-one-g300.html",
+        "summary": "Purpose-built networking silicon for massive AI cluster buildouts. When you're connecting 100K+ GPUs, the fabric between them matters as much as the chips themselves.",
+        "time": "Today"
+      },
+      {
+        "category": "enterprise",
+        "tag": "Enterprise",
+        "tag_class": "tag-business",
+        "source": "McKinsey",
+        "headline": "The New CIO Mandate: Strategy, Speed, and Scaled Intelligence",
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/the-new-cio-mandate-strategy-speed-and-scaled-intelligence",
+        "summary": "CIOs are becoming strategy architects, not just tech stewards. AI has surpassed cybersecurity and infra modernization as the #1 investment priority. Half of all companies plan budget increases above 4%.",
+        "time": "Today"
+      },
+      {
+        "category": "enterprise",
+        "tag": "Enterprise",
+        "tag_class": "tag-business",
+        "source": "Startup News",
+        "headline": "Deloitte's GenW.AI Platform Tackles the Enterprise AI Scaling Gap",
+        "url": "https://startupnews.fyi/2026/03/06/how-deloittes-genw-ai-platform-is-accelerating-enterprise-ai-adoption/",
+        "summary": "The hardest part of enterprise AI isn't the model \u2014 it's turning pilots into production. Deloitte is betting a platform play can bridge that gap for large orgs.",
+        "time": "Today"
+      },
+      {
+        "category": "tools",
+        "tag": "Tools",
+        "tag_class": "tag-tools",
+        "source": "Robotics & Automation News",
+        "headline": "AI Agents Poised to Become the Most Widely Adopted Enterprise AI Solution in 2026",
+        "url": "https://roboticsandautomationnews.com/2026/03/06/what-will-be-the-most-widely-adopted-ai-solution-in-2026/99304/",
+        "summary": "Agents that orchestrate across systems, reduce friction between departments, and eliminate repetitive tasks. The real unlock: agents that can reason about objectives, not just follow scripts.",
+        "time": "Today"
+      },
+      {
+        "category": "tools",
+        "tag": "Tools",
+        "tag_class": "tag-tools",
+        "source": "Lenovo StoryHub",
+        "headline": "Lenovo Showcases AI-Powered Enterprise Devices and Platforms at MWC 2026",
+        "url": "https://news.lenovo.com/pressroom/press-releases/trusted-ai-powered-business-computing-modular-enterprise-mwc/",
+        "summary": "Modular, enterprise-ready AI devices designed to scale AI with confidence. The edge AI hardware play is heating up \u2014 not everything runs in the cloud.",
+        "time": "Today"
+      },
+      {
+        "category": "policy",
+        "tag": "Policy",
+        "tag_class": "tag-world",
+        "source": "Baker Botts",
+        "headline": "March 11 Federal Deadlines Will Reshape the AI Regulatory Landscape",
+        "url": "https://www.bakerbotts.com/thought-leadership/publications/2026/march/march-2026-federal-deadlines-that-will-reshape-the-ai-regulatory-landscape",
+        "summary": "FTC must issue AI policy statement by March 11. Commerce Department evaluating which state AI laws conflict with federal policy. The preemption fight is about to get real.",
+        "time": "Today"
+      },
+      {
+        "category": "policy",
+        "tag": "Policy",
+        "tag_class": "tag-world",
+        "source": "CNBC",
+        "headline": "Chinese Tech Giants Feeling the Strain: Alibaba Reshuffles, Baidu Profits Drop 42%",
+        "url": "#",
+        "summary": "Alibaba reallocating resources to foundational models after senior exits. Baidu's quarterly profit down 42%. National AI ambition doesn't automatically solve the business model problem.",
+        "time": "Today"
+      },
+      {
+        "category": "deep",
+        "tag": "AI & Tech",
+        "tag_class": "tag-tech",
+        "source": "Data Center Knowledge",
+        "headline": "Hyperscalers Plan Nearly $700B in Data Center Spending for 2026",
+        "url": "https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-march-2026",
+        "summary": "Amazon $200B, Google $175-185B, Meta $115-135B. AI chips consume 10-14x more power than traditional processors. Some campuses are now topping 1 GW \u2014 enough to power entire cities.",
+        "time": "Today"
+      }
+    ]
+  },
+  {
     "date": "2026-03-06",
     "featured_tweets": [
       {
         "label": "The Innermost Loop",
-        "text": "Anthropic approaching $20B annualized revenue. Apple M5 Pro ships Neural Accelerators inside each GPU core — 4x AI performance over M4. OpenAI teases GPT-5.4 is 'sooner than you think.'\n\nThe Singularity now has a revenue run rate to match.",
+        "text": "Anthropic approaching $20B annualized revenue. Apple M5 Pro ships Neural Accelerators inside each GPU core \u2014 4x AI performance over M4. OpenAI teases GPT-5.4 is 'sooner than you think.'\n\nThe Singularity now has a revenue run rate to match.",
         "image": "images/alexwg-daily.png",
         "url": "https://x.com/alexwg",
         "author": "@alexwg"
       },
       {
         "label": "Salesforce AI",
-        "text": "Agentforce is redefining how enterprises scale customer service. Autonomous agents now resolve 40% of cases without human intervention — and they're getting smarter every week.",
+        "text": "Agentforce is redefining how enterprises scale customer service. Autonomous agents now resolve 40% of cases without human intervention \u2014 and they're getting smarter every week.",
         "image": "images/salesforce-agentforce.png",
         "url": "https://x.com/salesforce",
         "author": "@salesforce"
@@ -52,7 +200,7 @@
         "source": "OpenAI",
         "headline": "OpenAI Launches GPT-5.4 for Complex Professional Workflows",
         "url": "#",
-        "summary": "New model designed for long-running enterprise tasks. 47% fewer tokens on professional workloads. The efficiency gain matters — token costs are a real line item for IT teams.",
+        "summary": "New model designed for long-running enterprise tasks. 47% fewer tokens on professional workloads. The efficiency gain matters \u2014 token costs are a real line item for IT teams.",
         "time": "12 hours ago"
       },
       {
@@ -62,7 +210,7 @@
         "source": "Reuters",
         "headline": "Foxconn Revenue Surges 21.6% on AI Server Demand",
         "url": "#",
-        "summary": "Hon Hai reports strong growth driven by Nvidia-based AI infrastructure. The AI buildout is real — follow the supply chain, not the hype cycle.",
+        "summary": "Hon Hai reports strong growth driven by Nvidia-based AI infrastructure. The AI buildout is real \u2014 follow the supply chain, not the hype cycle.",
         "time": "14 hours ago"
       },
       {
@@ -82,7 +230,7 @@
         "source": "Anthropic",
         "headline": "Claude Cowork Now Runs Scheduled Tasks from Your Desktop",
         "url": "#",
-        "summary": "Set up automated workflows that run on a schedule — inbox digests, report generation, daily briefings — all from the Claude desktop app.",
+        "summary": "Set up automated workflows that run on a schedule \u2014 inbox digests, report generation, daily briefings \u2014 all from the Claude desktop app.",
         "time": "Today"
       },
       {
@@ -92,7 +240,7 @@
         "source": "Fujitsu",
         "headline": "Fujitsu Launches AI Platform Automating Full Software Development Lifecycle",
         "url": "#",
-        "summary": "Not just copilot coding — full lifecycle from requirements to testing. Enterprise-grade, aimed at large IT orgs managing hundreds of internal apps.",
+        "summary": "Not just copilot coding \u2014 full lifecycle from requirements to testing. Enterprise-grade, aimed at large IT orgs managing hundreds of internal apps.",
         "time": "Today"
       },
       {
@@ -140,7 +288,7 @@
         "tag": "Policy",
         "tag_class": "tag-world",
         "source": "UK Government",
-        "headline": "UK Backs £40M Frontier AI Research Lab for Science and Healthcare",
+        "headline": "UK Backs \u00a340M Frontier AI Research Lab for Science and Healthcare",
         "url": "#",
         "summary": "New lab focused on long-horizon AI breakthroughs. Government-funded AI R&D is picking up pace globally.",
         "time": "Today"
