@@ -610,6 +610,249 @@
                 padding: 10px 8px;
             }
         }
+        /* Email Signup CTA */
+        .email-cta {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 12px;
+            padding: 48px 40px;
+            margin: 60px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .email-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .email-cta h3 {
+            color: white;
+            font-size: 28px;
+            margin: 0 0 12px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-cta p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 16px;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .email-form input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .email-form input[type="email"]:focus {
+            border-color: #3b82f6;
+        }
+
+        .email-form button {
+            padding: 14px 28px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .email-form button:hover {
+            background: #2563eb;
+        }
+
+        .email-privacy {
+            font-size: 13px !important;
+            color: rgba(255, 255, 255, 0.5) !important;
+            margin-top: 16px;
+            margin-bottom: 0 !important;
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-success {
+            display: none;
+            color: #34d399;
+            font-weight: 600;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Compact mid-article signup */
+        .email-cta-compact {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            padding: 32px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .email-cta-compact h3 {
+            color: #1a1a2e;
+            font-size: 22px;
+            margin: 0 0 8px 0;
+        }
+
+        .email-cta-compact p {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .email-cta-compact .email-form input[type="email"] {
+            background: white;
+            border-color: #d1d5db;
+            color: #333;
+        }
+
+        .email-cta-compact .email-form input[type="email"]::placeholder {
+            color: #9ca3af;
+        }
+
+        .email-cta-compact .email-privacy {
+            color: #888 !important;
+        }
+
+        /* Ethical Ads */
+        .ad-container {
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .ad-container .ad-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #aaa;
+            margin-bottom: 8px;
+        }
+
+        .ea-placement {
+            min-height: 100px;
+        }
+
+        /* Author Bio */
+        .author-bio {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            background: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 48px 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a2e, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            margin: 0 0 4px 0;
+            font-size: 20px;
+        }
+
+        .author-info .author-role {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .author-info p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .author-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .author-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3b82f6;
+            border-bottom: none;
+        }
+
+        .author-links a:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 768px) {
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-cta {
+                padding: 36px 24px;
+            }
+
+            .email-cta h3 {
+                font-size: 22px;
+            }
+
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .author-links {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1383,6 +1626,24 @@
 
                 <hr>
 
+                <!-- Mid-Article Email Signup -->
+                <div class="email-cta-compact">
+                    <h3>Following this analysis?</h3>
+                    <p>Get notified when I publish new economic analysis on AI displacement, policy, and the future of work.</p>
+                    <form class="email-form" id="mid-signup" onsubmit="handleSignup(event, 'mid')">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="email-privacy">No spam. Unsubscribe anytime. Your email stays private.</p>
+                    <p class="email-success" id="mid-success">You're in. Watch your inbox.</p>
+                </div>
+
+                <!-- Ethical Ad Placement 1 -->
+                <div class="ad-container">
+                    <div class="ad-label">Supported by</div>
+                    <div id="ea-mid" data-ea-publisher="ethanhill-github-io" data-ea-type="text" class="ea-placement loaded"></div>
+                </div>
+
                 <!-- Prevent Civil War Section -->
                 <h2 id="prevent-collapse" class="section-header">The 10 Things That Prevent Civil War <a href="#prevent-collapse" class="anchor-link">¶</a></h2>
 
@@ -1480,6 +1741,40 @@
                         <a href="mailto:?subject=The Bridge to Universal Basic Services&body=Check out this analysis: https://ai-enterprise-report.com/bridge-to-ubs.html" class="share-btn share-btn-email">Share via Email</a>
                     </div>
                 </section>
+
+                <!-- Full Email Signup CTA -->
+                <div class="email-cta">
+                    <h3>Don't miss what comes next</h3>
+                    <p>I'm writing the playbook for the AI economy — policy analysis, fiscal math, and transition strategies that cut through the noise. Subscribe for new analysis delivered to your inbox.</p>
+                    <form class="email-form" id="bottom-signup" onsubmit="handleSignup(event, 'bottom')">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="email-privacy">No spam. No selling your data. Unsubscribe in one click.</p>
+                    <p class="email-success" id="bottom-success">You're in. Watch your inbox.</p>
+                </div>
+
+                <!-- Author Bio -->
+                <div class="author-bio">
+                    <div class="author-avatar">EH</div>
+                    <div class="author-info">
+                        <h4>Ethan Hill</h4>
+                        <p class="author-role">IT Professional · Economic Policy Analyst</p>
+                        <p>Ethan works at the intersection of technology and economic policy, analyzing how AI-driven automation is reshaping fiscal systems, labor markets, and the social contract. His work bridges the gap between technical reality and policy response.</p>
+                        <div class="author-links">
+                            <a href="https://x.com/ethanhill" target="_blank">Follow on X →</a>
+                            <a href="mailto:ethanhill@gmail.com">Get in Touch →</a>
+                            <a href="https://ethanhill0511.github.io/ai-enterprise-report/">More Analysis →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ethical Ad Placement 2 -->
+                <div class="ad-container">
+                    <div class="ad-label">Supported by</div>
+                    <div id="ea-bottom" data-ea-publisher="ethanhill-github-io" data-ea-type="text" class="ea-placement loaded"></div>
+                </div>
+
             </article>
         </main>
     </div>
@@ -1489,5 +1784,37 @@
         <p>Part of the <a href="https://ai-enterprise-report.com/" target="_blank">AI Enterprise Report</a></p>
         <p style="margin-top: 12px; font-size: 13px;">By <a href="https://x.com/ethanhill" target="_blank">@ethanhill</a> · March 2026</p>
     </footer>
+
+    <!-- EthicalAds Script -->
+    <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+
+    <!-- Email Signup Handler -->
+    <script>
+    function handleSignup(e, location) {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.querySelector('input[type="email"]').value;
+        const successEl = document.getElementById(location + '-success');
+
+        // Store signup locally (replace with your email service endpoint)
+        // For Substack/ConvertKit/Mailchimp, replace this fetch with their API
+        try {
+            // Log to console for now — swap this URL for your email service
+            console.log('Email signup:', email, 'from:', location);
+
+            // Store in localStorage as backup
+            const signups = JSON.parse(localStorage.getItem('ubs-signups') || '[]');
+            signups.push({ email: email, source: location, date: new Date().toISOString() });
+            localStorage.setItem('ubs-signups', JSON.stringify(signups));
+
+            // Show success state
+            form.style.display = 'none';
+            form.previousElementSibling.style.display = 'none'; // hide description
+            successEl.style.display = 'block';
+        } catch (err) {
+            alert('Something went wrong. Please try again.');
+        }
+    }
+    </script>
 </body>
 </html>
